@@ -1,3 +1,9 @@
+"""
+This script will:
+ > Connect to the pixhawk
+ > Perform the handshake if needed
+ > Receive a custom message (either VIDEO_MONITOR or COLOR_LIMITS) and display them
+"""
 import handshake
 from pymavlink import mavutil
 import time
