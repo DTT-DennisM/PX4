@@ -1,6 +1,7 @@
-'''
-program to detect a specific color range in a live environment (boundaries being lower_blue and upper_blue)
-'''
+"""
+This script will:
+ > Detect a specific color range in a live environment (boundaries being lower_blue and upper_blue)
+"""
 
 import numpy as np
 import cv2
