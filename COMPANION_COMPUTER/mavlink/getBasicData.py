@@ -1,3 +1,7 @@
+"""
+ This script will:
+ > Receive message from pixhawk and display them
+"""
 from pymavlink import mavutil
 import time
 
