@@ -1,3 +1,8 @@
+"""
+This script will:
+ > Connect to the pixhawk
+ > Perform a handshake with the pixhawk to open the data link between the devices
+"""
 from pymavlink import mavutil
 import time
 mavutil.set_dialect("video_monitor")
