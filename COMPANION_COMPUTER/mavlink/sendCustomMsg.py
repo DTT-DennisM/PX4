@@ -1,3 +1,10 @@
+"""
+This script will:
+ > Connect to the pixhawk
+ > Send a custom VIDEO_MONITOR message
+ > Wait for an acknowledgment before sending another message
+ > Retransmit if no acknowledgment has been received
+"""
 from pymavlink import mavutil
 import time
 
@@ -26,8 +33,6 @@ while True:
 	confidence = 0.357)
 	print("The custom message with the number %u was sent!" %(counter))
 	retransmit = False
-#	counter += 1
-#	time.sleep(1.0)
     # Wait for acknowledgment before sending new message
 	while True:
         # Wait for acknowledgment for a maximum of 3 seconds
@@ -35,31 +40,12 @@ while True:
 		try:
             # If acknowledgment has been received
 			if msg.confidence == 1 and msg.lat == counter:
-#				print('gud confidence: %f' % msg.confidence)
 				break
-#			else:
-#				print('no gud confidence: %f' % msg.confidence)
 		except:
             # No acknowledgment received, going to retransmit message
 			print("No response, retransmission!!")
 			retransmit = True
 			break
-"""
-	if not msg:
-		print('No msg!\n')
-		continue
-	if msg.get_type() == "BAD_DATA":
-		if mavutil.all_printable(msg.data):
-			sys.stdout.write(msg.data)
-			sys.stdout.flush()
-"""
-#	else:
-#		print('Info: %s | Latitude: %d | Longitude: %d | No. people: %d | Confidence: %f\n' % (msg.info, msg.lat, msg.lon, msg.no_people, msg.confidence))
-#		print('Latitude: %d' % msg.lat)
-#		print('Longitude: %d' % msg.lon)
-#		print('No. people: %d' % msg.no_people)
-#		print('Confidence: %f' % msg.confidence)
-#		print('\n')
 
 	counter += 1
 	time.sleep(4.0)
