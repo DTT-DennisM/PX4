@@ -2,7 +2,8 @@
 """
 This script will:
  > Connect to the pixhawk
- > Read telemetry from the UAV
+ > When disarmed, able to receive message from ground station to change color recognition boundaries
+ > When armed, switch to color recognition algorithm and detect color
 """
 
 from pymavlink import mavutil
@@ -172,7 +173,7 @@ def dk():
         # Show the frame
 		cv2.imshow('frame',frame)
         
-        #TODO: when attempting to use armed/disarmed functions, uncomment this
+        #TODO: when attempting to use armed/disarmed functions, uncomment this part
         # Check if the drone is disarmed
         #if not px4.armed:
         #    break
