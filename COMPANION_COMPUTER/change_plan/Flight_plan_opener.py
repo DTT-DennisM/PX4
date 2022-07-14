@@ -1,3 +1,15 @@
+"""
+This script will:
+ > Open GUI which will be able to open, change and save a flight plan
+ > Open file by clicking "Open a file" and navigate to the flight plan
+ > Change can be done by filling in the coordinates manually by filling in longitude, 
+    latitude and an optional "heading" (if the mission needs to be rotated counter-clcokwise)
+ > You can also paste them from clipboard (copy coordinates via google maps and click "Paste")
+ > A google maps link can also be used to change the flight plan (copy the link and select "Import from URL")
+ > When the parameters have been filled in, press "Mission change" to change the flight plan
+ > Saving can be done by pressing "Save plan". In there, you can either create a new plan or overwrite the old plan
+"""
+
 import json
 import tkinter as tk
 from tkinter import ttk
