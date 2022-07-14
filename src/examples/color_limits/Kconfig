@@ -1,5 +1,0 @@
-menuconfig EXAMPLES_COLOR_LIMITS
-	bool "color_limits"
-	default n
-	---help---
-		Enable support for color_limits

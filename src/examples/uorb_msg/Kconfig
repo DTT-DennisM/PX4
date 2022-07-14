@@ -1,5 +1,0 @@
-menuconfig EXAMPLES_UORB_MSG
-	bool "uorb_msg"
-	default n
-	---help---
-		Enable support for uorb_msg

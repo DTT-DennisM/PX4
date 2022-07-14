@@ -1,5 +1,0 @@
-menuconfig EXAMPLES_VIDEO_MONITOR
-	bool "video_monitor"
-	default n
-	---help---
-		Enable support for video_monitor

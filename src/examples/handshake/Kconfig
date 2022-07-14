@@ -1,5 +1,0 @@
-menuconfig EXAMPLES_HANDSHAKE
-	bool "handshake"
-	default n
-	---help---
-		Enable support for handshake
