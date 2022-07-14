@@ -1,0 +1,5 @@
+menuconfig EXAMPLES_UORB_MSG_BACK
+	bool "uorb_msg_back"
+	default n
+	---help---
+		Enable support for uorb_msg_back
