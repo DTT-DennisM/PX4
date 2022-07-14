@@ -37,6 +37,7 @@ def calc_second_coord(latitude, longitude, heading, d):
 
 	return lat2, lon2
 
+# Calculate the angle between two coordinates
 def calc_heading(lat1, lon1, lat2, lon2):
 	dLon = (lon2 - lon1) * toRad
 	lat1 = lat1 * toRad
@@ -48,25 +49,3 @@ def calc_heading(lat1, lon1, lat2, lon2):
 
 	heading = ((atan2(y, x)) * toDeg + 360) % 360
 	return heading
-
-#To test if both algorithms work with random coordinates
-"""
-lat1 = 52.2364017
-lon1 = 6.8451811
-heading = 450
-d = 1000
-[lat2, lon2] = calc_second_coord(lat1,lon1,heading,d)
-print("latlon:")
-print(lat2)
-print(lon2)
-print("heading:")
-print(calc_heading(lat1, lon1, lat2, lon2))
-[lat3, lon3] = calc_second_coord(lat1, lon1, calc_heading(lat1, lon1, lat2, lon2) + 90, 2000)
-print("latlon3:")
-print(lat3)
-print(lon3)
-print("dist:")
-print(calc_distance(lat1, lon1, lat3, lon3))
-print("heading:")
-print(calc_heading(lat1, lon1, lat3, lon3))
-"""
