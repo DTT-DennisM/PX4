@@ -147,28 +147,6 @@ def dk():
 				centery = yg + (hg/2)
 				center = [centerx,centery]
 				print(center)
-#				cv2.circle(frame,(xg,yg),radius=10,color=(255,255,255),thickness=-1)
-
-# angle attempt
-"""
-				focal = 2714.3 / 4
-#				cx = 959.5 / 2
-#				cy = 539.5 / 2
-				cx = (width-1) / 2
-				cy = (height-1) / 2
-
-				v_x = (centerx-cx) / focal
-				v_y = (centery-cy) / focal
-
-				a_rad = math.atan(v_x)
-				a_deg = math.atan(v_x) * 180/math.pi
-#				print(a_rad)
-				h = 40
-				x_dist = math.tan(a_rad)*h
-				print(wg)
-				print(hg)
-"""
-#end angle attempt
 
         # Show the frame
 		cv2.imshow('frame',frame)
